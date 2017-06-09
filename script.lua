@@ -23,12 +23,15 @@ end
 
 -- Loop while the inventory is not full
 while (checkSlots() == false) do
+    --[[
+    Assuming the turtle is placed on the edge of the blocks to be harvested,
+    the turtle will dig forwards until an unfamiliar block is hit. It will
+    then turn and go back down the path it has created to reset.
+    ]]--
     if (turtle.compare()) then
         turtle.dig()
         turtle.forward()
-        --continue
-    end
-    if (not turtle.compare()) then
+    elseif (not turtle.compare()) then
         turtle.turnRight()
     end
 end
