@@ -21,10 +21,12 @@ function checkSlots()
     return full
 end
 
+-- Loop while the inventory is not full
 while (checkSlots() == false) do
     if (turtle.compare()) then
         turtle.dig()
         turtle.forward()
+        continue;
     end
     if (not turtle.compare()) then
         turtle.turnRight()
