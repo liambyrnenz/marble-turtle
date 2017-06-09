@@ -26,7 +26,7 @@ while (checkSlots() == false) do
     if (turtle.compare()) then
         turtle.dig()
         turtle.forward()
-        continue;
+        --continue
     end
     if (not turtle.compare()) then
         turtle.turnRight()
