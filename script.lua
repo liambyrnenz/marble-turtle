@@ -33,5 +33,13 @@ while (checkSlots() == false) do
         turtle.forward()
     elseif (not turtle.compare()) then
         turtle.turnRight()
+        turtle.turnRight()
+        -- go back to start position
+        while (turtle.compare()) do
+            turtle.forward()
+        end
+        turtle.turnRight()
+        turtle.forward()
+        turtle.turnLeft()
     end
 end
