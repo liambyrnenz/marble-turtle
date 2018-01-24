@@ -12,13 +12,12 @@ function checkSlots()
     --[[
     Check that the inventory of the turtle is full or not.
     ]]--
-    full = true
     for i = 1, 9 do
         if (turtle.getItemCount(i) ~= 64) then
-            full = false
+            return false
         end
     end
-    return full
+    return true
 end
 
 -- Loop while the inventory is not full
