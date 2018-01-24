@@ -8,8 +8,6 @@
 -- http://computercraft.info/wiki/Turtle_(API)
 -- http://www.computercraft.info/wiki/Os.loadAPI
 
--- VARIATION 1
-
 function checkSlots()
     --[[
     Check that the inventory of the turtle is full or not.
@@ -27,7 +25,7 @@ while (checkSlots() == false) do
     --[[
     Assuming the turtle is placed on the edge of the blocks to be harvested,
     the turtle will dig forwards until an unfamiliar block is hit. It will
-    then turn and go back down the path it has created to reset.
+    then...do something? This bit hasn't really been thought out yet.
     ]]--
     if (turtle.compare()) then
         turtle.dig()
